@@ -1,7 +1,8 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.viewController;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import scala.App;
 
 public class SecondaryController {
 

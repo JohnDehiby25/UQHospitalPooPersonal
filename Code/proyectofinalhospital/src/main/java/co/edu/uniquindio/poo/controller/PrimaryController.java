@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.viewController;
+package co.edu.uniquindio.poo.controller;
 
 import java.io.IOException;
 

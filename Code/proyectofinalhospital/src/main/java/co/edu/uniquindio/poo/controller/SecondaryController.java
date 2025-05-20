@@ -1,10 +1,8 @@
 package co.edu.uniquindio.poo.controller;
 
 import java.io.IOException;
-
-
-import co.edu.uniquindio.poo.App;
 import javafx.fxml.FXML;
+import co.edu.uniquindio.poo.App; 
 
 public class SecondaryController {
 

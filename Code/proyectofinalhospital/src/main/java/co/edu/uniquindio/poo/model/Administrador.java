@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,6 +16,41 @@ public class Administrador extends Usuario {
 		this.listPacientes=new ArrayList<>();
 		this.listSalas = new ArrayList<>();
 		this.listCitasMedicas= new ArrayList<>();
+	}
+    public ArrayList<CitaMedica> reportarCitasMedicasDisponibles(){
+		ArrayList<CitaMedica> citasMedicasDisponibles = new ArrayList<>();
+		for(CitaMedica c:listCitasMedicas) {
+			boolean disponibilidad = true;
+			if(c.getDisponibilidad() == disponibilidad) {
+				citasMedicasDisponibles.add(c);
+			}
+		}
+		return citasMedicasDisponibles;
+	}
+	public void reportarOcupacionHospital() {
+		boolean hayDisponibles = false;
+		for(Sala s: listSalas) {
+			if(s.getEstado()) {
+				hayDisponibles = true;
+				break;
+			}
+		}
+		if(hayDisponibles) {
+			System.out.println("La ocupacion del hospital esta disponible en algunas salas");
+		}else {
+			System.out.print("No hay salas disponibles en el hospital");
+		}
+		
+	}
+	public CitaMedica cambioCita(CitaMedica newCita, LocalDateTime horarioBuscar) {
+	    for (int i = 0; i < listCitasMedicas.size(); i++) {
+	        CitaMedica cita = listCitasMedicas.get(i);
+	        if (cita.getHorario().isEqual(horarioBuscar)) {
+	            listCitasMedicas.set(i, newCita); 
+	            return newCita;
+	        }
+	    }
+	    return null;
 	}
     
 	@Override

@@ -166,4 +166,5 @@ public class Administrador extends Usuario {
 	public ArrayList<CitaMedica> getListCitasMedicas(){
 		return listCitasMedicas;
 	}
+	
 }

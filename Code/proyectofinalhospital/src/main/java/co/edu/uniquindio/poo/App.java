@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import co.edu.uniquindio.poo.controller.CrudPacienteMedicoController;
+import co.edu.uniquindio.poo.model.Administrador;
 import co.edu.uniquindio.poo.utils.Paths;
 
 /**
@@ -21,6 +23,10 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Paths.GESTIONAR_MEDICOS_VIEW));
 
         AnchorPane pane = loader.load();
+
+        CrudPacienteMedicoController controller= loader.getController();
+
+        controller.setAdministrador(new Administrador(STYLESHEET_CASPIAN, STYLESHEET_CASPIAN, STYLESHEET_MODENA, STYLESHEET_CASPIAN, 0));
 
         Scene scene = new Scene(pane);
 

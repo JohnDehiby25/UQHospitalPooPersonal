@@ -8,6 +8,6 @@ module co.edu.uniquindio.poo {
     opens co.edu.uniquindio.poo to org.junit.platform.commons;
     
     exports co.edu.uniquindio.poo;
-    
+    exports co.edu.uniquindio.poo.model;
     exports co.edu.uniquindio.poo.controller;
 }

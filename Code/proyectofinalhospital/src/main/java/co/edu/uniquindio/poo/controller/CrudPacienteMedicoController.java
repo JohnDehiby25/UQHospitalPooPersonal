@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class CrudPacienteMedicoController {
 
@@ -52,11 +53,25 @@ public class CrudPacienteMedicoController {
 
     @FXML
     void eliminarMedico(ActionEvent event) {
+        eliminarMedico();
 
+    }
+    public void eliminarMedico(){
+        Medico medico = tblMedicos.getSelectionModel().getSelectedItem();
+
+        administrador.eliminarMedico(medico.getId());
+
+        actualizarTabla();
     }
 
     @FXML
     void guardarMedico(ActionEvent event) {
+
+        guardarMedico();
+
+    }
+
+    public void guardarMedico(){
 
         Medico medico = new Medico("Jorge","23442220","jorgeramirez@gmail.com","3245643202",40);
 
@@ -69,6 +84,8 @@ public class CrudPacienteMedicoController {
         administrador.registrarmedico(medico.getNombre(),medico.getId(),medico.getCorreo(),medico.getTelefono(),medico.getEdad());
 
         actualizarTabla();
+
+        limpiarCampos();
     }
 
     private void actualizarTabla(){
@@ -77,8 +94,22 @@ public class CrudPacienteMedicoController {
         tblMedicos.refresh();
 
     }
+    private void limpiarCampos(){
+
+        txtCorreo.setText("");
+        txtEdad.setText("");
+        txtId.setText("");
+        txtNombre.setText("");
+        txtTelefono.setText("");
+    }
     @FXML
     void initialize(){
+
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
+        colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
+        colEdad.setCellValueFactory(new PropertyValueFactory<>("edad"));
 
     }
 

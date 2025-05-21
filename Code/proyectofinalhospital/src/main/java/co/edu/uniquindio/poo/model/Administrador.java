@@ -16,6 +16,7 @@ public class Administrador extends Usuario {
 		this.listSalas = new ArrayList<>();
 		this.listCitasMedicas= new ArrayList<>();
 	}
+    
 	@Override
 	public void registrarDatosPersonales() {
 		System.out.println("\n Registro de datos Administrador");
@@ -51,5 +52,69 @@ public class Administrador extends Usuario {
 		System.out.println("Sus datos fueron actualizados correctamente");
 		
 		actualizacionDatos.close();
+	}
+    public boolean modificarMedico(String idmedicoBuscar,Medico newMedico) {
+		for(int i=0; i<listMedicos.size();i++) {
+			Medico m = listMedicos.get(i);
+			if(m.getId().equals(idmedicoBuscar)) {
+				listMedicos.set(i, newMedico);
+				return true;
+			}
+		}return false;
+		
+	}
+	public boolean registrarmedico(String nombre,String id, String correo, String telefono, int edad){
+		for(Medico m:listMedicos) {
+			if(m.getId().equals(id)) {
+				return false;
+			}
+		}
+		Medico medicoNuevo = new Medico(nombre,id,correo,telefono,edad);
+		return listMedicos.add(medicoNuevo);
+	}
+	public boolean eliminarMedico(String idMedicoEliminar) {
+		for(int i=0; i<listMedicos.size();i++) {
+			if(listMedicos.get(i).getId().equals(idMedicoEliminar)) {
+				listMedicos.remove(i);
+			}
+		}
+		return true;
+	}
+	public boolean modificarPaciente(String idPacienteModificar,Paciente newPaciente) {
+		for(int i=0; i<listPacientes.size();i++) {
+			Paciente paciente= listPacientes.get(i);
+			if(paciente.getId().equals(idPacienteModificar)) {
+				listPacientes.set(i, newPaciente);
+				return true;
+			}
+		}
+		return false;
+	}
+	public boolean registrarpaciente(String nombre,String id,String correo, String telefono,int edad){
+		
+		for(Paciente m:listPacientes) {
+			if(m.getId().equals(id)) {
+				return false;
+			}
+		}
+		Paciente newPaciente = new Paciente(nombre,id,correo,telefono,edad);
+		listPacientes.add(newPaciente);
+		return true;
+	}
+	public boolean eliminarPaciente(String idPacienteEliminar) {
+		for(int i=0;i<listPacientes.size();i++) {
+			if(listPacientes.get(i).getId().equals(idPacienteEliminar)) {
+				listPacientes.remove(i);
+			}
+		}return true;
+	}
+	public ArrayList<Paciente> getListPacientes(){
+		return listPacientes;
+	}
+	public ArrayList<Medico> getListMedicos(){
+		return listMedicos;
+	}
+	public ArrayList<CitaMedica> getListCitasMedicas(){
+		return listCitasMedicas;
 	}
 }

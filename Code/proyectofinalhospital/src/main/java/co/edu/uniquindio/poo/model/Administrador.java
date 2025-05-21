@@ -96,6 +96,7 @@ public class Administrador extends Usuario {
 		
 		actualizacionDatos.close();
 	}
+	//Metodo para cambiar un medico por otro y reemplazarlo
     public boolean modificarMedico(String idmedicoBuscar,Medico newMedico) {
 		for(int i=0; i<listMedicos.size();i++) {
 			Medico m = listMedicos.get(i);
@@ -106,9 +107,10 @@ public class Administrador extends Usuario {
 		}return false;
 		
 	}
+	//Metodo para cregistrar un medico de acuerdo al id, y hay que agregar una prueba para que la edad no sea negativa
 	public boolean registrarmedico(String nombre,String id, String correo, String telefono, int edad){
 		for(Medico m:listMedicos) {
-			if(m.getId().equals(id)) {
+			if(m.getId().equals(id) || m.getEdad()<0) {
 				return false;
 			}
 		}
@@ -136,7 +138,7 @@ public class Administrador extends Usuario {
 	public boolean registrarpaciente(String nombre,String id,String correo, String telefono,int edad){
 		
 		for(Paciente m:listPacientes) {
-			if(m.getId().equals(id)) {
+			if(m.getId().equals(id) || m.getEdad()<0) {
 				return false;
 			}
 		}

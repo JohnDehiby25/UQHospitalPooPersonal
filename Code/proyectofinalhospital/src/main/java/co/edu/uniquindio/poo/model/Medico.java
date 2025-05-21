@@ -2,8 +2,9 @@ package co.edu.uniquindio.poo.model;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.time.*;
 
-public class Medico extends Usuario{
+public class Medico extends Usuario implements HorarioConsulta{
 	private ArrayList<Paciente> listPacientes;
 	private ArrayList<HistorialMedico> listHistorialMedico;
 	private ArrayList<LocalDateTime> listHorariosDisponibles;
@@ -50,6 +51,15 @@ public class Medico extends Usuario{
 		System.out.println("Sus datos fueron actualizados correctamente");
 		
 		actualizacionDatos.close();
+	}
+    @Override
+	public void establecerHorarioDisponible(LocalDateTime horario) {
+		listHorariosDisponibles.add(horario);
+	}
+    
+	@Override
+	public ArrayList<LocalDateTime> obtenerHorariosDisponibles(){
+		return listHorariosDisponibles;
 	}
 	
 }

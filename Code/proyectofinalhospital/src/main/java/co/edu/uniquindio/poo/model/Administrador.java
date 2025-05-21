@@ -24,6 +24,10 @@ public class Administrador extends Usuario {
 		this.listSalas = new ArrayList<>();
 		this.listCitasMedicas= new ArrayList<>();
 	}
+	//Notifica al medico o paciente de cualquier novedad
+	public void notificarUsuario(Notificacion usuario,String mensaje) {
+		usuario.notificar(mensaje);
+	}
     public ArrayList<CitaMedica> reportarCitasMedicasDisponibles(){
 		ArrayList<CitaMedica> citasMedicasDisponibles = new ArrayList<>();
 		for(CitaMedica c:listCitasMedicas) {

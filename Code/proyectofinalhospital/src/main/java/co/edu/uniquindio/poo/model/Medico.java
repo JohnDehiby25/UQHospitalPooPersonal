@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.*;
 
-public class Medico extends Usuario implements HorarioConsulta{
+public class Medico extends Usuario implements HorarioConsulta,Notificacion{
 	private ArrayList<Paciente> listPacientes;
 	private ArrayList<HistorialMedico> listHistorialMedico;
 	private ArrayList<LocalDateTime> listHorariosDisponibles;
@@ -88,6 +88,9 @@ public class Medico extends Usuario implements HorarioConsulta{
 				}
 			}
 		}return null;
+	}
+	public void notificar(String mensaje) {
+		System.out.println("El Medico: " + getNombre() + " recibió el mensaje " + mensaje);
 	}
 	
 	public ArrayList<Paciente> getlistPacientesDisponibles(){

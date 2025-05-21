@@ -22,6 +22,9 @@ public class Paciente extends Usuario{
 		this.listCitasMedicas= new ArrayList<>();
 		this.listHistorialMedico = new ArrayList<>();
 	}
+	public void notificar(String mensaje) {
+		System.out.println("El paciente " + getNombre() + " recibió el mensaje" + mensaje);
+	}
 	
 	@Override
 	public void registrarDatosPersonales() {

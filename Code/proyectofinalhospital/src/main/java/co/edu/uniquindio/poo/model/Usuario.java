@@ -13,6 +13,10 @@ public abstract class Usuario {
 	protected String correo;
 	protected String telefono;
 	protected int edad;
+
+	public Usuario(){
+		
+	}
 	
 	public Usuario(String nombre,String id, String correo, String telefono, int edad) {
 		

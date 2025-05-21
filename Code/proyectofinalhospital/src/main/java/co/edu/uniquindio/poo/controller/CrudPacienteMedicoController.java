@@ -49,6 +49,21 @@ public class CrudPacienteMedicoController {
     @FXML
     void actualizarMedico(ActionEvent event) {
 
+        Medico medico = new Medico("juan", "343", "efedede", "23323", 43);
+
+        medico.setId(txtId.getText());
+        medico.setNombre(txtNombre.getText());
+        medico.setCorreo(txtCorreo.getText());
+        medico.setEdad(Integer.parseInt(txtEdad.getText()));
+        medico.setTelefono(txtTelefono.getText());
+
+        administrador.modificarMedico(medico.getId(), medico);
+
+
+        limpiarCampos();
+        actualizarTabla();
+
+
     }
 
     @FXML
@@ -93,6 +108,8 @@ public class CrudPacienteMedicoController {
         tblMedicos.getItems().addAll(administrador.getListMedicos());
         tblMedicos.refresh();
 
+        
+
     }
     private void limpiarCampos(){
 
@@ -101,6 +118,8 @@ public class CrudPacienteMedicoController {
         txtId.setText("");
         txtNombre.setText("");
         txtTelefono.setText("");
+
+        txtId.setEditable(true);
     }
     @FXML
     void initialize(){
@@ -111,6 +130,23 @@ public class CrudPacienteMedicoController {
         colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
         colEdad.setCellValueFactory(new PropertyValueFactory<>("edad"));
 
+        tblMedicos.setOnMouseClicked(mouseEvent -> {
+
+            if(tblMedicos.getSelectionModel().getSelectedItem() != null) cargarCampos();
+        });
+
+    }
+    private void cargarCampos(){
+
+        Medico medico = tblMedicos.getSelectionModel().getSelectedItem();
+
+        txtCorreo.setText(medico.getCorreo());
+        txtEdad.setText(String.valueOf(medico.getEdad()));
+        txtId.setText(medico.getId());
+        txtNombre.setText(medico.getNombre());
+        txtTelefono.setText(medico.getTelefono());
+
+        txtId.setEditable(false);
     }
 
     public Administrador getAdministrador() {

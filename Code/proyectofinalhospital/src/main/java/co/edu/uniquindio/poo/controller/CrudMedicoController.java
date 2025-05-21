@@ -1,7 +1,9 @@
 package co.edu.uniquindio.poo.controller;
 
+import co.edu.uniquindio.poo.SceneManager;
 import co.edu.uniquindio.poo.model.Administrador;
 import co.edu.uniquindio.poo.model.Medico;
+import co.edu.uniquindio.poo.utils.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -9,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class CrudPacienteMedicoController {
+public class CrudMedicoController {
 
     @FXML
     private TableColumn<Medico, String> colCorreo;
@@ -134,6 +136,11 @@ public class CrudPacienteMedicoController {
 
             if(tblMedicos.getSelectionModel().getSelectedItem() != null) cargarCampos();
         });
+
+    }
+     @FXML
+    void cambiarMenuPrincipal(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.MENU_PRINCIPAL_VIEW);
 
     }
     private void cargarCampos(){

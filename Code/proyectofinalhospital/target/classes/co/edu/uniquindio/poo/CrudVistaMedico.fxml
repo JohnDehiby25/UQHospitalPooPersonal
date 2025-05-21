@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="594.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.CrudPacienteMedicoController">
+<AnchorPane prefHeight="594.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.CrudMedicoController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6fa7ad" height="235.0" layoutX="7.0" layoutY="55.0" stroke="BLACK" strokeType="INSIDE" width="421.0" />
       <Label layoutX="168.0" layoutY="26.0" text="Gestionar Medicos " />
@@ -35,5 +35,6 @@
         </columns>
       </TableView>
       <Button layoutX="190.0" layoutY="555.0" mnemonicParsing="false" onAction="#eliminarMedico" text="Eliminar" />
+      <Button layoutX="23.0" layoutY="555.0" mnemonicParsing="false" onAction="#cambiarMenuPrincipal" text="Regresar" />
    </children>
 </AnchorPane>

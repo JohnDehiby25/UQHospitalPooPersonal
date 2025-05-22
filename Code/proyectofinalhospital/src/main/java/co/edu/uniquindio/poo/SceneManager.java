@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo;
 
 import java.io.IOException;
+
+import co.edu.uniquindio.poo.controller.AdministradorController;
 import co.edu.uniquindio.poo.controller.CrudMedicoController;
 import co.edu.uniquindio.poo.controller.CrudPacienteController;
 import co.edu.uniquindio.poo.controller.MenuPrincipalController;
@@ -40,6 +42,8 @@ public class SceneManager {
                 ((MenuPrincipalController) controller).setAdministrador(administrador);
             }else if(controller instanceof CrudPacienteController){
                 ((CrudPacienteController) controller).setAdministrador(administrador);
+            }else if(controller instanceof AdministradorController){
+                ((AdministradorController) controller).setAdministrador(administrador);
             }
             
             Scene scene = new Scene(root);

@@ -54,7 +54,9 @@ public abstract class Usuario {
 	public int getEdad() {
 		return edad;
 	}
-	public abstract void registrarDatosPersonales();
-	public abstract void actualizarDatosPersonales();
+	public abstract String registrarDatosPersonales();
+	public abstract String actualizarDatosPersonales(
+		String nombre, String id, String correo, String telefono, int edad
+	);
 	
 }

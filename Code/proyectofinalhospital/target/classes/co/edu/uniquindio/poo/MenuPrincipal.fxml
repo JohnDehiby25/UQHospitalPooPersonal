@@ -14,5 +14,6 @@
       </Label>
       <Button layoutX="212.0" layoutY="426.0" mnemonicParsing="false" onAction="#cambiarEscena" prefHeight="25.0" prefWidth="157.0" text="Gestionar Medicos" />
       <Button layoutX="216.0" layoutY="370.0" mnemonicParsing="false" onAction="#cambiarEscenaPacientesCrud" prefHeight="25.0" prefWidth="147.0" text="Gestionar Pacientes" />
+      <Button layoutX="219.0" layoutY="312.0" mnemonicParsing="false" onAction="#cambiarEscenaAdministrador" prefHeight="25.0" prefWidth="147.0" text="Administrador Registro" />
    </children>
 </AnchorPane>

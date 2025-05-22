@@ -21,7 +21,7 @@ public class App extends Application {
         // Cargar escena inicial
         SceneManager.cambiarEscena(Paths.MENU_PRINCIPAL_VIEW);
         
-        primaryStage.setTitle("Hospital Management System");
+        primaryStage.setTitle("Sistema de gestión de hospital");
         primaryStage.show();
     }
 

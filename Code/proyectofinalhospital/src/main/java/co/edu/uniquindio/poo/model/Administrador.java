@@ -9,7 +9,7 @@ package co.edu.uniquindio.poo.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Administrador extends Usuario {
 	private ArrayList<Medico> listMedicos;
@@ -65,40 +65,20 @@ public class Administrador extends Usuario {
 	}
     
 	@Override
-	public void registrarDatosPersonales() {
-		System.out.println("\n Registro de datos Administrador");
-		System.out.println("Nombre: " + nombre);
-		System.out.println("Id: " + id);
-		System.out.println("Correo: " + correo);
-		System.out.println("Telefono: " + telefono);
-		System.out.println("Edad: " + edad);
-
-
-		
+	public String registrarDatosPersonales() {
+		return ("\n Registro de datos Administrador \n" +
+		"Nombre: " + nombre + "\n Id: " + id + "\n Correo: " + correo + 
+		"\n Telefono: " + telefono +
+		"\n Edad: " + edad);	
 	}
 	@Override
-	public void actualizarDatosPersonales() {
-		Scanner actualizacionDatos = new Scanner(System.in);
-		
-		System.out.println("Actualice su nombre:");
-		setNombre(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su id:");
-		setId(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su correo:");
-		setCorreo(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su telefono:");
-		setTelefono(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su edad:");
-		setEdad(actualizacionDatos.nextInt());
-		
-		actualizacionDatos.nextLine();
-		System.out.println("Sus datos fueron actualizados correctamente");
-		
-		actualizacionDatos.close();
+	public String actualizarDatosPersonales(String nuevoNombre, String nuevoId, String nuevoCorreo, String nuevoTelefono, int nuevaEdad) {
+    setNombre(nuevoNombre);
+    setId(nuevoId);
+    setCorreo(nuevoCorreo);
+    setTelefono(nuevoTelefono);
+    setEdad(nuevaEdad);
+    return "Datos actualizados correctamente:\n" + registrarDatosPersonales(); 
 	}
 	//Metodo para cambiar un medico por otro y reemplazarlo
     public boolean modificarMedico(String idmedicoBuscar,Medico newMedico) {

@@ -8,7 +8,6 @@
 package co.edu.uniquindio.poo.model;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.time.*;
 
 public class Medico extends Usuario implements HorarioConsulta,Notificacion{
@@ -24,40 +23,20 @@ public class Medico extends Usuario implements HorarioConsulta,Notificacion{
 		this.listHorariosDisponibles=new ArrayList<>();
 	}
 	@Override
-	public void registrarDatosPersonales() {
-		System.out.println("\n Registro de datos Medico");
-		System.out.println("Nombre: " + nombre);
-		System.out.println("Id: " + id);
-		System.out.println("Correo: " + correo);
-		System.out.println("Telefono: " + telefono);
-		System.out.println("Edad: " + edad);
-
-
-		
+	public String registrarDatosPersonales() {
+		return ("\n Registro de datos Administrador \n" +
+		"Nombre: " + nombre + "\n Id: " + id + "\n Correo: " + correo + 
+		"\n Telefono: " + telefono +
+		"\n Edad: " + edad);	
 	}
 	@Override
-	public void actualizarDatosPersonales() {
-		Scanner actualizacionDatos = new Scanner(System.in);
-		
-		System.out.println("Actualice su nombre:");
-		setNombre(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su id:");
-		setId(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su correo:");
-		setCorreo(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su telefono:");
-		setTelefono(actualizacionDatos.nextLine());
-		
-		System.out.println("Actualice su edad:");
-		setEdad(actualizacionDatos.nextInt());
-		
-		actualizacionDatos.nextLine();
-		System.out.println("Sus datos fueron actualizados correctamente");
-		
-		actualizacionDatos.close();
+	public String actualizarDatosPersonales(String nuevoNombre, String nuevoId, String nuevoCorreo, String nuevoTelefono, int nuevaEdad) {
+    setNombre(nuevoNombre);
+    setId(nuevoId);
+    setCorreo(nuevoCorreo);
+    setTelefono(nuevoTelefono);
+    setEdad(nuevaEdad);
+    return "Datos actualizados correctamente:\n" + registrarDatosPersonales(); 
 	}
     @Override
 	public void establecerHorarioDisponible(LocalDateTime horario) {

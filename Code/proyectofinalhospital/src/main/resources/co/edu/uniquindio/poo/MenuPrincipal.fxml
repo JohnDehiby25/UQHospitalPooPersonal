@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="593.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.MenuPrincipalController">
    <children>
       <Label layoutX="162.0" layoutY="21.0" prefHeight="27.0" prefWidth="214.0" text="          Hospital UQ" textAlignment="CENTER">
@@ -13,6 +12,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="212.0" layoutY="426.0" mnemonicParsing="false" onAction="#cambiarEscena" text="Gestionar Medicos" />
+      <Button layoutX="212.0" layoutY="426.0" mnemonicParsing="false" onAction="#cambiarEscena" prefHeight="25.0" prefWidth="157.0" text="Gestionar Medicos" />
+      <Button layoutX="216.0" layoutY="370.0" mnemonicParsing="false" onAction="#cambiarEscenaPacientesCrud" prefHeight="25.0" prefWidth="147.0" text="Gestionar Pacientes" />
    </children>
 </AnchorPane>

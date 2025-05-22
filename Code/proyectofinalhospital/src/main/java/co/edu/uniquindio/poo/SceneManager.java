@@ -2,6 +2,7 @@ package co.edu.uniquindio.poo;
 
 import java.io.IOException;
 import co.edu.uniquindio.poo.controller.CrudMedicoController;
+import co.edu.uniquindio.poo.controller.CrudPacienteController;
 import co.edu.uniquindio.poo.controller.MenuPrincipalController;
 import co.edu.uniquindio.poo.model.Administrador;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,11 @@ import javafx.stage.Stage;
 public class SceneManager {
     private static Stage stage;
     private static Administrador administrador;
+    private static CrudPacienteController pacienteController;
+
+    public static void setPacienteController(CrudPacienteController controller) {
+        pacienteController = controller;
+    }
 
     public static void setStage(Stage stage) {
         SceneManager.stage = stage;
@@ -32,6 +38,8 @@ public class SceneManager {
                 ((CrudMedicoController) controller).setAdministrador(administrador);
             } else if (controller instanceof MenuPrincipalController) {
                 ((MenuPrincipalController) controller).setAdministrador(administrador);
+            }else if(controller instanceof CrudPacienteController){
+                ((CrudPacienteController) controller).setAdministrador(administrador);
             }
             
             Scene scene = new Scene(root);

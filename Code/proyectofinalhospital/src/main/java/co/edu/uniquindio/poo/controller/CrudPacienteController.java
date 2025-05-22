@@ -71,7 +71,7 @@ public class CrudPacienteController {
     public void eliminarPaciente(){
         Paciente paciente = tblPacientes.getSelectionModel().getSelectedItem();
 
-        administrador.eliminarMedico(paciente.getId());
+        administrador.eliminarPaciente(paciente.getId());
 
         actualizarTabla();
     }
@@ -95,11 +95,12 @@ public class CrudPacienteController {
         paciente.setId(txtId.getText());
         paciente.setEdad(Integer.parseInt(txtEdad.getText()));
 
-        administrador.registrarmedico(paciente.getNombre(),paciente.getId(),paciente.getCorreo(),paciente.getTelefono(),paciente.getEdad());
+        administrador.registrarpaciente(paciente.getNombre(),paciente.getId(),paciente.getCorreo(),paciente.getTelefono(),paciente.getEdad());
 
         actualizarTabla();
 
         limpiarCampos();
+        SceneManager.setPacienteController(this);
     }
     private void actualizarTabla(){
         tblPacientes.getItems().clear();
@@ -126,6 +127,10 @@ public class CrudPacienteController {
         colCorreo.setCellValueFactory(new PropertyValueFactory<>("correo"));
         colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
         colEdad.setCellValueFactory(new PropertyValueFactory<>("edad"));
+
+        if(administrador != null) {
+        actualizarTabla();
+    }
 
         tblPacientes.setOnMouseClicked(mouseEvent -> {
 

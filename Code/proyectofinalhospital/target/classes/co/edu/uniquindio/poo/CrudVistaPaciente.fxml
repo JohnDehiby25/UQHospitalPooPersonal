@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-             xmlns:fx="http://javafx.com/fxml"
-             fx:controller="co.edu.uniquindio.poo.controller.CrudPacienteController"
-             prefHeight="400.0" prefWidth="600.0">
+
+<AnchorPane prefHeight="498.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.CrudPacienteController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ac8f5" height="498.0" stroke="BLACK" strokeType="INSIDE" width="426.0" />
+      <Label layoutX="150.0" layoutY="14.0" prefHeight="17.0" prefWidth="126.0" text="  Gestionar Pacientes" />
+      <Label layoutX="20.0" layoutY="68.0" prefHeight="17.0" prefWidth="58.0" text="Nombre" />
+      <Label layoutX="22.0" layoutY="106.0" prefHeight="17.0" prefWidth="27.0" text="Id" />
+      <Label layoutX="231.0" layoutY="68.0" text="Correo" />
+      <Label layoutX="231.0" layoutY="114.0" text="Telefono" />
+      <Label layoutX="20.0" layoutY="151.0" text="Edad" />
+      <TextField fx:id="txtNombre" layoutX="74.0" layoutY="64.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="txtCorreo" layoutX="283.0" layoutY="64.0" prefHeight="25.0" prefWidth="126.0" />
+      <TextField fx:id="txtId" layoutX="74.0" layoutY="102.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="txtTelefono" layoutX="283.0" layoutY="110.0" prefHeight="25.0" prefWidth="126.0" />
+      <TextField fx:id="txtEdad" layoutX="74.0" layoutY="147.0" prefHeight="25.0" prefWidth="139.0" />
+      <Button layoutX="222.0" layoutY="172.0" mnemonicParsing="false" onAction="#guardarPaciente" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
+      <Button layoutX="308.0" layoutY="172.0" mnemonicParsing="false" onAction="#actualizarPaciente" text="Actualizar" />
+      <TableView fx:id="tblPacientes" layoutX="19.0" layoutY="218.0" prefHeight="265.0" prefWidth="382.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="77.0" text="Nombre" />
+          <TableColumn fx:id="colId" prefWidth="73.0" text="Id" />
+            <TableColumn fx:id="colEdad" prefWidth="75.0" text="Edad" />
+            <TableColumn fx:id="colCorreo" prefWidth="75.0" text="Correo" />
+            <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

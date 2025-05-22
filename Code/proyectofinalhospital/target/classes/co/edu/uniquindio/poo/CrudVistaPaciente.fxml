@@ -25,14 +25,16 @@
       <TextField fx:id="txtEdad" layoutX="74.0" layoutY="147.0" prefHeight="25.0" prefWidth="139.0" />
       <Button layoutX="222.0" layoutY="172.0" mnemonicParsing="false" onAction="#guardarPaciente" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
       <Button layoutX="308.0" layoutY="172.0" mnemonicParsing="false" onAction="#actualizarPaciente" text="Actualizar" />
-      <TableView fx:id="tblPacientes" layoutX="19.0" layoutY="218.0" prefHeight="265.0" prefWidth="382.0">
+      <TableView fx:id="tblPacientes" layoutX="36.0" layoutY="218.0" prefHeight="234.0" prefWidth="365.0">
         <columns>
           <TableColumn fx:id="colNombre" prefWidth="77.0" text="Nombre" />
           <TableColumn fx:id="colId" prefWidth="73.0" text="Id" />
             <TableColumn fx:id="colEdad" prefWidth="75.0" text="Edad" />
-            <TableColumn fx:id="colCorreo" prefWidth="75.0" text="Correo" />
-            <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+            <TableColumn fx:id="colCorreo" prefWidth="66.0" text="Correo" />
+            <TableColumn fx:id="colTelefono" prefWidth="84.0" text="Telefono" />
         </columns>
       </TableView>
+      <Button layoutX="34.0" layoutY="459.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" text="Regresar" />
+      <Button layoutX="161.0" layoutY="459.0" mnemonicParsing="false" onAction="#eliminarPaciente" text="Eliminar" />
    </children>
 </AnchorPane>

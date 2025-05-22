@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller=" co.edu.uniquindio.poo.controller.InfoAdicionalAdministrador">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6088ab" height="598.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="564.0" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#notificarUsuario" text="Notificar Usuario" />
+      <TextArea fx:id="txtAreaNotificaciones" layoutX="14.0" layoutY="48.0" prefHeight="111.0" prefWidth="244.0" />
+      <Button layoutX="282.0" layoutY="14.0" mnemonicParsing="false" onAction="#reportarCitas" text="Reporte Citas Medicas" />
+      <TextArea fx:id="txtAreaReporteCitasMedicas" layoutX="282.0" layoutY="48.0" prefHeight="111.0" prefWidth="271.0" />
+      <Button layoutX="14.0" layoutY="197.0" mnemonicParsing="false" onAction="#reportarOcupacion" text="Reporte Ocupacion Hospital" />
+      <TextArea fx:id="txtAreaReporteOcupacionHospital" layoutX="14.0" layoutY="232.0" prefHeight="111.0" prefWidth="533.0" />
+      <Button layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#cambiarCitas" text="Cambio Citas Medicas" />
+      <TextArea fx:id="txtAreaCambioCitas" layoutX="16.0" layoutY="390.0" prefHeight="111.0" prefWidth="533.0" />
+      <Button layoutX="36.0" layoutY="523.0" mnemonicParsing="false" onAction="#regresarVentanaPrincipal" text="Regresar" />
+      <Button layoutX="393.0" layoutY="523.0" mnemonicParsing="false" onAction="#limpiarCampos" text="Refrescar" />
+   </children>
+</AnchorPane>

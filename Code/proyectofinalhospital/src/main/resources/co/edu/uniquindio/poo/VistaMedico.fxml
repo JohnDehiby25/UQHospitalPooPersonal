@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.MedicoController">
+   <children>
+      <Label layoutX="149.0" layoutY="14.0" prefHeight="27.0" prefWidth="165.0" text="   Gestion Medico">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="28.0" layoutY="53.0" mnemonicParsing="false" onAction="#registrarInfo" prefHeight="25.0" prefWidth="152.0" text="Regitro Datos Personales" />
+      <TextArea fx:id="txtArea" layoutX="28.0" layoutY="88.0" prefHeight="138.0" prefWidth="412.0" />
+      <Label layoutX="28.0" layoutY="238.0" text="Nombre" />
+      <Label layoutX="28.0" layoutY="283.0" text="Id" />
+      <Label layoutX="234.0" layoutY="238.0" text="Telefono" />
+      <Label layoutX="234.0" layoutY="283.0" text="Edad" />
+      <Label layoutX="28.0" layoutY="327.0" text="Correo" />
+      <TextField fx:id="txtNombre" layoutX="75.0" layoutY="234.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="txtTelefono" layoutX="294.0" layoutY="234.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="txtId" layoutX="75.0" layoutY="279.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="txtEdad" layoutX="296.0" layoutY="279.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="txtCorreo" layoutX="75.0" layoutY="323.0" prefHeight="25.0" prefWidth="140.0" />
+      <Button layoutX="39.0" layoutY="405.0" mnemonicParsing="false" onAction="#regresarVentanaPrincipal" text="Regresar" />
+      <Button layoutX="270.0" layoutY="405.0" mnemonicParsing="false" onAction="#actualizarInformacion" text="Actualizar" />
+   </children>
+</AnchorPane>

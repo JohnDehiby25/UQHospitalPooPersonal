@@ -28,4 +28,13 @@ public class MenuPrincipalController {
     void cambiarEscenaAdministrador(ActionEvent event) {
         SceneManager.cambiarEscena(Paths.ADMINISTRADOR_VIEW);
     }
+    @FXML
+    void cambiarEscenaPaciente(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.PACIENTE_VIEW);
+
+    }
+    @FXML
+    void cambiarEscenaMedico(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.MEDICO_VIEW);
+    }
 }

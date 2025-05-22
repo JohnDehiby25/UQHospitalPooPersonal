@@ -1,30 +1,44 @@
 package co.edu.uniquindio.poo;
 
 import java.io.IOException;
-
+import co.edu.uniquindio.poo.controller.CrudMedicoController;
+import co.edu.uniquindio.poo.controller.MenuPrincipalController;
+import co.edu.uniquindio.poo.model.Administrador;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class SceneManager {
-
     private static Stage stage;
+    private static Administrador administrador;
 
-    public static void setStage(Stage s) {
-        stage = s;
+    public static void setStage(Stage stage) {
+        SceneManager.stage = stage;
+    }
+    
+    public static void setAdministrador(Administrador admin) {
+        administrador = admin;
     }
 
     public static void cambiarEscena(String rutaFXML) {
         try {
-            FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource(rutaFXML));
-            AnchorPane root = loader.load();
+            FXMLLoader loader = new FXMLLoader(App.class.getResource(rutaFXML));
+            Parent root = loader.load();
+            
+            // Pasar el administrador al controlador
+            Object controller = loader.getController();
+            if (controller instanceof CrudMedicoController) {
+                ((CrudMedicoController) controller).setAdministrador(administrador);
+            } else if (controller instanceof MenuPrincipalController) {
+                ((MenuPrincipalController) controller).setAdministrador(administrador);
+            }
+            
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.show();
         } catch (IOException e) {
+            System.err.println("Error al cargar la escena: " + rutaFXML);
             e.printStackTrace();
         }
     }
-    
 }

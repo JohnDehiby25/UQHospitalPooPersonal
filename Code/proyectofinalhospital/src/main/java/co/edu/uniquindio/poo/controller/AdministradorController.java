@@ -19,13 +19,20 @@ public class AdministradorController  {
 
     @FXML
     void registroDatosPersonales(ActionEvent event) {
-        txtArea.setText(administrador.registrarDatosPersonales());
+        
+        String nombre = txtNombre.getText();
+        String id = txtId.getText();
+        String correo = txtCorreo.getText();
+        String telefono = txtTelefono.getText();
+        int edad = Integer.parseInt(txtEdad.getText());
 
-        txtNombre.setText(administrador.getNombre());
-        txtId.setText(administrador.getId());
-        txtCorreo.setText(administrador.getCorreo());
-        txtTelefono.setText(administrador.getTelefono());
-        txtEdad.setText(String.valueOf(administrador.getEdad()));
+        administrador.setNombre(nombre);
+        administrador.setId(id);
+        administrador.setCorreo(correo);
+        administrador.setTelefono(telefono);
+        administrador.setEdad(edad);
+
+        txtArea.setText(administrador.registrarDatosPersonales());
 
     }
     @FXML

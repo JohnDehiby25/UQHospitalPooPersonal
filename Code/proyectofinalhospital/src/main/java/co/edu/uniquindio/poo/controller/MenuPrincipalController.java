@@ -12,7 +12,9 @@ public class MenuPrincipalController {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
-    
+    public Administrador geAdministrador(){
+        return administrador;
+    }
     @FXML
     void cambiarEscena(ActionEvent event) {
         SceneManager.cambiarEscena(Paths.GESTIONAR_MEDICOS_VIEW);

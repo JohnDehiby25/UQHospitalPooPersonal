@@ -20,6 +20,9 @@ public class SceneManager {
     public static void setPacienteController(CrudPacienteController controller) {
         pacienteController = controller;
     }
+    public static CrudPacienteController getPacienteController(){
+        return pacienteController;
+    }
 
     public static void setStage(Stage stage) {
         SceneManager.stage = stage;

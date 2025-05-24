@@ -89,4 +89,11 @@ public class Paciente extends Usuario{
 	public ArrayList<HistorialMedico> getListHistorialmedico(){
 		return listHistorialMedico;
 	}
+	public ArrayList<CitaMedica> getListCitasMedicas() {
+		return listCitasMedicas;
+	}
+	public void setListCitasMedicas(ArrayList<CitaMedica> listCitasMedicas) {
+		this.listCitasMedicas = listCitasMedicas;
+	}
+	
 }

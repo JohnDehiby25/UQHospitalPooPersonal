@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.InfoAdicionalPaciente">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.InfoAdicionalPaciente">
    <children>
-      <Button layoutX="22.0" layoutY="353.0" mnemonicParsing="false" onAction="#regresarPacienteVista" text="Regresar" />
+      <Button layoutX="13.0" layoutY="478.0" mnemonicParsing="false" onAction="#regresarPacienteVista" text="Regresar" />
+      <Button layoutX="67.0" layoutY="14.0" mnemonicParsing="false" onAction="#solicitarCitasMedicas" prefHeight="25.0" prefWidth="135.0" text="Solicitar Citas Medicas" />
+      <TextArea fx:id="txtAreaSolicitud" layoutX="33.0" layoutY="46.0" prefHeight="125.0" prefWidth="212.0" />
+      <Button layoutX="327.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelarCitasMedicas" text="Cancelar Citas Medicas" />
+      <TextArea fx:id="txtAreaCancelacion" layoutX="290.0" layoutY="46.0" prefHeight="125.0" prefWidth="212.0" />
+      <Button layoutX="70.0" layoutY="204.0" mnemonicParsing="false" onAction="#obtenerCitasMedicasActuales" prefHeight="25.0" prefWidth="138.0" text="Citas Medicas Actuales" />
+      <Button layoutX="318.0" layoutY="204.0" mnemonicParsing="false" onAction="#consultarHistorialMedico" text="Consultar Historial Medico" />
+      <TextArea fx:id="txtAreaCitasAct" layoutX="33.0" layoutY="277.0" prefHeight="125.0" prefWidth="212.0" />
+      <TextArea fx:id="txtAreaConsulta" layoutX="290.0" layoutY="277.0" prefHeight="125.0" prefWidth="212.0" />
    </children>
 </AnchorPane>

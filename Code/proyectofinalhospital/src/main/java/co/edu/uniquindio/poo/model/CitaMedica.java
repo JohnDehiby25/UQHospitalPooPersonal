@@ -81,7 +81,7 @@ public class CitaMedica {
            ", Especialidad: " + especialidad +
            ", Médico: " + medico +
            ", Motivo Consulta: " + motivoConsulta +
-           ", Paciente: " + idPaciente;
+           ", Cedula Paciente: " + idPaciente;
 	}
 	
 	

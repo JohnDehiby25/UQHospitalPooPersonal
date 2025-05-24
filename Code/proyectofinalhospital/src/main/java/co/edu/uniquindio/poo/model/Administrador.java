@@ -16,6 +16,7 @@ public class Administrador extends Usuario {
 	private ArrayList<Paciente> listPacientes;
 	private ArrayList<Sala> listSalas;
 	private ArrayList<CitaMedica> listCitasMedicas;
+	private ArrayList<Usuario> listUsuarios;
 	
 	public Administrador(String nombre,String id, String correo, String telefono, int edad) {
 		super(nombre,id,correo,telefono,edad);
@@ -146,5 +147,12 @@ public class Administrador extends Usuario {
 	public ArrayList<CitaMedica> getListCitasMedicas(){
 		return listCitasMedicas;
 	}
+	public ArrayList<Usuario> getListUsuarios() {
+		return listUsuarios;
+	}
+	public void setListUsuarios(ArrayList<Usuario> listUsuarios) {
+		this.listUsuarios = listUsuarios;
+	}
+	
 	
 }

@@ -48,6 +48,10 @@ public class InfoAdicionalAdministrador {
 
     @FXML
     void limpiarCampos(ActionEvent event) {
+        txtAreaCambioCitas.setText("");
+        txtAreaNotificaciones.setText("");
+        txtAreaReporteCitasMedicas.setText("");
+        txtAreaReporteOcupacionHospital.setText("");
 
     }
 
@@ -113,7 +117,9 @@ public class InfoAdicionalAdministrador {
     void initialize(){
       paciente = new Paciente("Juan Pérez", "12345", "juan@email.com", "555-1234", 30);
       txtAreaReporteCitasMedicas.setEditable(false);
-
+      txtAreaReporteCitasMedicas.setEditable(false);
+      txtAreaReporteOcupacionHospital.setEditable(false);
+      txtAreaCambioCitas.setEditable(false);
     }
 
     public Administrador getAdministrador() {

@@ -90,6 +90,15 @@ public class AdministradorController  {
     void irInfoAdicionalAdministrador(ActionEvent event) {
         SceneManager.cambiarEscena(Paths.INFO_ADICIONAL_ADMIN);
     }
-    
+    @FXML
+    void limpiarCampos(ActionEvent event) {
+        txtArea.setText("");
+        txtCorreo.setText("");
+        txtEdad.setText("");
+        txtId.setText("");
+        txtNombre.setText("");
+        txtTelefono.setText("");
+
+    }
 
 }

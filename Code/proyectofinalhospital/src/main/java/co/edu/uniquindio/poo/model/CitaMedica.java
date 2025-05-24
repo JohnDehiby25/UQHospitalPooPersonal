@@ -75,7 +75,14 @@ public class CitaMedica {
 	public String getIdPaciente() {
 		return idPaciente;
 	}
-	
+	@Override
+	public String toString() {
+    return "Fecha: " + horario +
+           ", Especialidad: " + especialidad +
+           ", Médico: " + medico +
+           ", Motivo Consulta: " + motivoConsulta +
+           ", Paciente: " + idPaciente;
+	}
 	
 	
 	

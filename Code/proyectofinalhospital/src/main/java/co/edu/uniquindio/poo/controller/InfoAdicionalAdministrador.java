@@ -35,6 +35,15 @@ public class InfoAdicionalAdministrador {
     @FXML
     void cambiarCitas(ActionEvent event) {
 
+        CitaMedica cita = new CitaMedica(LocalDateTime.of(2025, 12, 5, 6, 30), "Control general", "sala 23 piso 1", "Sara Salazar", "Malestar general y vomito",false, true, "Ana Sofia Perez");
+
+        CitaMedica cita2= new CitaMedica(LocalDateTime.of(2025, 12, 5, 6, 30), "Control general", "sala 23 piso 1", "Andres López", "Malestar general y vomito",false, true, "Ana Sofia Perez");
+
+        administrador.getListCitasMedicas().add(cita);
+        administrador.getListCitasMedicas().add(cita2);
+
+        txtAreaCambioCitas.setText("La cita nueva del paciente " + cita2.getIdPaciente() + " es " + administrador.cambioCita(cita, LocalDateTime.of(2025, 12, 5, 6, 30)));
+
     }
 
     @FXML

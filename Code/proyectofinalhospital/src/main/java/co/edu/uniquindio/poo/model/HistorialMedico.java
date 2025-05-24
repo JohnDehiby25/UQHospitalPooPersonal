@@ -80,5 +80,16 @@ public class HistorialMedico {
 	public String getTratamiento() {
 		return tratamiento;
 	}
+	@Override
+	public String toString() {
+		return "Fecha: " + fecha +
+			", Estado: " + estado +
+			", Numero de medicamentos: " + numeroMedicamentos +
+			", Enfermedad: " + enfermedad +
+			", Antecedentes: " + antecedentes +
+			", Edad: " + edad +
+			", Diagnostico: " + diagnostico +
+			", Tratamiento: " + tratamiento + "\n";
+	}
 	
 }

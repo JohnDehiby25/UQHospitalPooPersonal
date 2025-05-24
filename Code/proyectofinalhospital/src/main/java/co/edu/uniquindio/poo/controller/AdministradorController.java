@@ -86,5 +86,10 @@ public class AdministradorController  {
         this.administrador = administrador;
     }
     
+    @FXML
+    void irInfoAdicionalAdministrador(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.INFO_ADICIONAL_ADMIN);
+    }
+    
 
 }

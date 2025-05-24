@@ -7,7 +7,7 @@
  */
 package co.edu.uniquindio.poo.model;
 
-public abstract class Usuario {
+public abstract class Usuario  implements Notificacion{
 	protected String nombre;
 	protected String id;
 	protected String correo;
@@ -58,5 +58,9 @@ public abstract class Usuario {
 	public abstract String actualizarDatosPersonales(
 		String nombre, String id, String correo, String telefono, int edad
 	);
+	@Override
+	public String notificar(String mensaje){
+		return "El usuario " + nombre + " ha sido notificado";
+	}
 	
 }

@@ -10,7 +10,7 @@ package co.edu.uniquindio.poo.model;
 import java.util.ArrayList;
 import java.time.*;
 
-public class Medico extends Usuario implements HorarioConsulta,Notificacion{
+public class Medico extends Usuario implements HorarioConsulta{
 	private ArrayList<Paciente> listPacientes;
 	private ArrayList<HistorialMedico> listHistorialMedico;
 	private ArrayList<LocalDateTime> listHorariosDisponibles;
@@ -69,8 +69,9 @@ public class Medico extends Usuario implements HorarioConsulta,Notificacion{
 		}return null;
 	}
 	//Se implementa la interfaz notificaciones pero es para que el medico reciba el el mensaje
-	public void notificar(String mensaje) {
-		System.out.println("El Medico: " + getNombre() + " recibió el mensaje " + mensaje);
+	@Override
+	public String notificar(String mensaje) {
+		return "El Medico: " + getNombre() + " recibió el mensaje " + mensaje;
 	}
 	
 	public ArrayList<Paciente> getlistPacientesDisponibles(){

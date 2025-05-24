@@ -17,7 +17,7 @@
          </font></Label>
       <Button layoutX="25.0" layoutY="56.0" mnemonicParsing="false" onAction="#registroDatosPersonales" text="Registro de datos Personales" />
       <TextArea fx:id="txtArea" layoutX="21.0" layoutY="85.0" prefHeight="118.0" prefWidth="489.0" />
-      <Button layoutX="276.0" layoutY="442.0" mnemonicParsing="false" onAction="#onActualizarDatosPersonales" text="Actualizar Datos personales" />
+      <Button layoutX="169.0" layoutY="442.0" mnemonicParsing="false" onAction="#onActualizarDatosPersonales" text="Actualizar Datos personales" />
       <Label layoutX="25.0" layoutY="220.0" prefHeight="17.0" prefWidth="52.0" text="Nombre">
          <font>
             <Font size="14.0" />
@@ -44,5 +44,6 @@
       <TextField fx:id="txtTelefono" layoutX="92.0" layoutY="317.0" prefHeight="25.0" prefWidth="413.0" promptText="Escriba su telefono aqui" />
       <TextField fx:id="txtEdad" layoutX="92.0" layoutY="349.0" prefHeight="25.0" prefWidth="413.0" promptText="Escriba su edad aqui" />
       <Button layoutX="25.0" layoutY="442.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" text="Regresar" />
+      <Button layoutX="407.0" layoutY="442.0" mnemonicParsing="false" onAction="#irInfoAdicionalAdministrador" text="Mas opciones..." />
    </children>
 </AnchorPane>

@@ -39,19 +39,25 @@ public class Administrador extends Usuario {
 		}
 		return citasMedicasDisponibles;
 	}
-	public void reportarOcupacionHospital() {
-		boolean hayDisponibles = false;
-		for(Sala s: listSalas) {
-			if(s.getEstado()) {
-				hayDisponibles = true;
-				break;
-			}
-		}
-		if(hayDisponibles) {
-			System.out.println("La ocupacion del hospital esta disponible en algunas salas");
-		}else {
-			System.out.print("No hay salas disponibles en el hospital");
-		}
+	public String reportarOcupacionHospital() {
+		StringBuilder reporte = new StringBuilder();
+    	boolean hayDisponibles = false;
+
+    for (Sala sala : listSalas) {
+        if (sala.getEstado()) {  
+            hayDisponibles = true;
+            reporte.append("Sala disponible: ")
+                   .append(sala.getNumeroSala())
+                   .append(" Estado: ").append(sala.getEstado())
+                   .append("\n");
+        }
+    }
+
+    if (hayDisponibles) {
+        return "Salas disponibles en el hospital:\n" + reporte.toString();
+    } else {
+        return "No hay salas disponibles en el hospital.";
+    }
 		
 	}
 	public CitaMedica cambioCita(CitaMedica newCita, LocalDateTime horarioBuscar) {
@@ -74,11 +80,11 @@ public class Administrador extends Usuario {
 	}
 	@Override
 	public String actualizarDatosPersonales(String nuevoNombre, String nuevoId, String nuevoCorreo, String nuevoTelefono, int nuevaEdad) {
-    setNombre(nuevoNombre);
-    setId(nuevoId);
-    setCorreo(nuevoCorreo);
-    setTelefono(nuevoTelefono);
-    setEdad(nuevaEdad);
+		setNombre(nuevoNombre);
+		setId(nuevoId);
+		setCorreo(nuevoCorreo);
+		setTelefono(nuevoTelefono);
+		setEdad(nuevaEdad);
     return "Datos actualizados correctamente:\n" + registrarDatosPersonales(); 
 	}
 	//Metodo para cambiar un medico por otro y reemplazarlo
@@ -153,6 +159,13 @@ public class Administrador extends Usuario {
 	public void setListUsuarios(ArrayList<Usuario> listUsuarios) {
 		this.listUsuarios = listUsuarios;
 	}
+	public ArrayList<Sala> getListSalas() {
+		return listSalas;
+	}
+	public void setListSalas(ArrayList<Sala> listSalas) {
+		this.listSalas = listSalas;
+	}
+	
 	
 	
 }

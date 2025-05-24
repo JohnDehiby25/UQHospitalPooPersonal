@@ -13,4 +13,6 @@ public class Paths {
 
     public static final String INFO_ADICIONAL_ADMIN = "/co/edu/uniquindio/poo/InfoAdicionalAdministrador.fxml";
 
+    public static final String INFO_ADICIONAL_PACIENTE = "/co/edu/uniquindio/poo/InfoAdicionalPaciente.fxml";
+
 }

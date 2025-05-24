@@ -6,6 +6,7 @@ import co.edu.uniquindio.poo.controller.AdministradorController;
 import co.edu.uniquindio.poo.controller.CrudMedicoController;
 import co.edu.uniquindio.poo.controller.CrudPacienteController;
 import co.edu.uniquindio.poo.controller.InfoAdicionalAdministrador;
+import co.edu.uniquindio.poo.controller.InfoAdicionalPaciente;
 import co.edu.uniquindio.poo.controller.MenuPrincipalController;
 import co.edu.uniquindio.poo.controller.PacienteController;
 import co.edu.uniquindio.poo.model.Administrador;
@@ -53,6 +54,8 @@ public class SceneManager {
                 ((PacienteController) controller).setAdministrador(administrador);
             }else if(controller instanceof InfoAdicionalAdministrador){
                 ((InfoAdicionalAdministrador) controller).setAdministrador(administrador);
+            }else if(controller instanceof InfoAdicionalPaciente){
+                ((InfoAdicionalPaciente) controller).setAdministrador(administrador);
             }
             
             Scene scene = new Scene(root);

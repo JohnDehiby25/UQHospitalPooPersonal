@@ -88,6 +88,12 @@ public class  PacienteController {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
+
+     @FXML
+    void IrVistainfoPaciente(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.INFO_ADICIONAL_PACIENTE);
+
+    }
     
 
 }

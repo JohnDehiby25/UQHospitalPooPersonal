@@ -5,10 +5,12 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.MedicoController">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#50a0eb" height="494.0" stroke="BLACK" strokeType="INSIDE" width="451.0" />
       <Label layoutX="149.0" layoutY="14.0" prefHeight="27.0" prefWidth="165.0" text="   Gestion Medico">
          <font>
             <Font name="System Italic" size="18.0" />

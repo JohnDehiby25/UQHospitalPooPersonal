@@ -3,10 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.InfoAdicionalPaciente">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27b4db" height="536.0" stroke="BLACK" strokeType="INSIDE" width="550.0" />
       <Button layoutX="13.0" layoutY="478.0" mnemonicParsing="false" onAction="#regresarPacienteVista" text="Regresar" />
       <Button layoutX="67.0" layoutY="14.0" mnemonicParsing="false" onAction="#solicitarCitasMedicas" prefHeight="25.0" prefWidth="135.0" text="Solicitar Citas Medicas" />
       <TextArea fx:id="txtAreaSolicitud" layoutX="33.0" layoutY="46.0" prefHeight="125.0" prefWidth="212.0" />

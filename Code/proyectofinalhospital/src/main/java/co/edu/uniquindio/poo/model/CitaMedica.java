@@ -30,6 +30,9 @@ public class CitaMedica {
 		this.disponibilidad=disponibilidad;
 		this.idPaciente=idPaciente;
 	}
+	public CitaMedica(){
+		
+	}
 	public void setHorario(LocalDateTime horario) {
 		this.horario=horario;
 	}

@@ -95,6 +95,10 @@ public class MedicoController {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
+    @FXML
+    void InfoAdicionalMedico(ActionEvent event) {
+        SceneManager.cambiarEscena(Paths.INFO_ADICIONAL_MEDICO);
+    }
     
 
 }

@@ -100,6 +100,9 @@ public class Administrador extends Usuario {
 	}
 	//Metodo para cregistrar un medico de acuerdo al id, y hay que agregar una prueba para que la edad no sea negativa
 	public boolean registrarmedico(String nombre,String id, String correo, String telefono, int edad){
+		if (edad <= 0) {
+        return false; 
+    	}
 		for(Medico m:listMedicos) {
 			if(m.getId().equals(id) || m.getEdad()<0) {
 				return false;
@@ -112,9 +115,10 @@ public class Administrador extends Usuario {
 		for(int i=0; i<listMedicos.size();i++) {
 			if(listMedicos.get(i).getId().equals(idMedicoEliminar)) {
 				listMedicos.remove(i);
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 	public boolean modificarPaciente(String idPacienteModificar,Paciente newPaciente) {
 		for(int i=0; i<listPacientes.size();i++) {
@@ -127,7 +131,9 @@ public class Administrador extends Usuario {
 		return false;
 	}
 	public boolean registrarpaciente(String nombre,String id,String correo, String telefono,int edad){
-		
+		if (edad <= 0 || nombre == null || nombre.isBlank()) {
+        return false;
+    }
 		for(Paciente m:listPacientes) {
 			if(m.getId().equals(id) || m.getEdad()<0) {
 				return false;
@@ -141,8 +147,9 @@ public class Administrador extends Usuario {
 		for(int i=0;i<listPacientes.size();i++) {
 			if(listPacientes.get(i).getId().equals(idPacienteEliminar)) {
 				listPacientes.remove(i);
+				return true;
 			}
-		}return true;
+		}return false;
 	}
 	public ArrayList<Paciente> getListPacientes(){
 		return listPacientes;
